@@ -11,13 +11,13 @@ bot = Bot(token=TOKEN)
 async def send_food_question():
     await bot.send_message(
         chat_id=GROUP_ID,
-        text="🍽 What do you want to eat tomorrow?"
+        text="🍽 আগামীকাল বুয়া কি রান্না করবে?"
     )
 
 def job():
     asyncio.run(send_food_question())
 
-# Bangladesh 10 PM = 16:00 UTC
+# Bangladesh 10 PM = 23:45 UTC
 schedule.every().day.at("16:00").do(job)
 
 print("Bot running...")
