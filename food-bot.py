@@ -7,9 +7,9 @@
 ‎bot = Bot(token=TOKEN)
 ‎
 ‎async def main():
-‎    await bot.send_message(
-‎        chat_id=GROUP_ID,
-‎        text="✅ BOT WORKING!"
-‎    )
+‎    await bot.send_message(
+‎        chat_id=GROUP_ID,
+‎        text="✅ BOT WORKING!"
+‎    )
 ‎
 ‎asyncio.run(main())
