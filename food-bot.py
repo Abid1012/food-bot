@@ -18,7 +18,7 @@ def job():
     asyncio.run(send_food_question())
 
 # TEST: sends every 1 minute
-schedule.every(1).minutes.do(job)
+schedule.every().day.at("16:00").do(job)
 
 print("Bot running...")
 
