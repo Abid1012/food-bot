@@ -15,10 +15,13 @@ async def send_food_question():
     )
 
 def job():
-    asyncio.run(send_food_question())
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    loop.run_until_complete(send_food_question())
+    loop.close()
 
-# TEST: sends every 1 minute
-schedule.every().day.at("16:00").do(job)
+# 10 PM Bangladesh = 16:00 UTC
+schedule.every().day.at("17:00").do(job)
 
 print("Bot running...")
 
